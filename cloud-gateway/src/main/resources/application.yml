@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: cloud-gateway
+  main:
+    keep-alive: true
+  cloud:
+    gateway:
+      server:
+        webflux: 
+          routes:
+            - id: auth-route
+              uri: http://localhost:8081
+              predicates:
+                - Path=/**
