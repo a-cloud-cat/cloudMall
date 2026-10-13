@@ -22,12 +22,18 @@
         <spring-cloud.version>2025.1.0</spring-cloud.version>
         <spring-cloud-alibaba.version>2025.1.0.0</spring-cloud-alibaba.version>
         <pagehelper.version>6.1.0</pagehelper.version>
+        <mybatis-generator.version>1.4.2</mybatis-generator.version>
+        <mybatis.version>3.5.19</mybatis.version>
+        <mybatis-spring.version>3.0.5</mybatis-spring.version>
+        <druid.version>1.2.25</druid.version>
     </properties>
 
     <modules>
         <module>cloud-auth</module>
         <module>cloud-gateway</module>
         <module>cloud-common</module>
+        <module>cloud-mbg</module>
+        <module>cloud-admin</module>
     </modules>
 
     <dependencyManagement>
