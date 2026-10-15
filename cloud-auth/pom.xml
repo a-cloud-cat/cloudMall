@@ -17,6 +17,17 @@
             <artifactId>cloud-common</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!-- 拿到 UmsAdmin 的 Model/Mapper 以及 mybatis/druid/mysql 运行时依赖 -->
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>cloud-mbg</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- 只引 crypto，用于 BCrypt 校验，不引入整个 Spring Security 过滤链 -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
