@@ -5,7 +5,6 @@ import org.apache.ibatis.annotations.Param;
 import org.example.cloudmall.model.PmsBrand;
 import org.example.cloudmall.model.PmsBrandExample;
 
-/** pms_brand 表的 Mapper 接口，SQL 写在 PmsBrandMapper.xml */
 public interface PmsBrandMapper {
     long countByExample(PmsBrandExample example);
 

@@ -2,7 +2,6 @@ package org.example.cloudmall.model;
 
 import java.io.Serializable;
 
-/** pms_brand 表的实体类，一行记录 = 一个对象 */
 public class PmsBrand implements Serializable {
     private Long id;
 

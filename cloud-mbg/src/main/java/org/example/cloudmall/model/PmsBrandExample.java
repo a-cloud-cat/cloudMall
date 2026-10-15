@@ -3,10 +3,11 @@ package org.example.cloudmall.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/** pms_brand 表的查询条件拼装器，oredCriteria 列表最终被 MyBatis XML 拼成 WHERE 子句 */
 public class PmsBrandExample {
     protected String orderByClause;
+
     protected boolean distinct;
+
     protected List<Criteria> oredCriteria;
 
     public PmsBrandExample() {
@@ -62,7 +63,6 @@ public class PmsBrandExample {
         distinct = false;
     }
 
-    /** Criteria 公共基类，封装 andXxxEqualTo/Like/In 等条件拼装方法 */
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
 
@@ -103,8 +103,6 @@ public class PmsBrandExample {
             }
             criteria.add(new Criterion(condition, value1, value2));
         }
-
-
 
         public Criteria andIdIsNull() {
             addCriterion("id is null");
@@ -165,7 +163,6 @@ public class PmsBrandExample {
             addCriterion("id not between", value1, value2, "id");
             return (Criteria) this;
         }
-
 
         public Criteria andNameIsNull() {
             addCriterion("name is null");
@@ -237,7 +234,6 @@ public class PmsBrandExample {
             return (Criteria) this;
         }
 
-
         public Criteria andFirstLetterIsNull() {
             addCriterion("first_letter is null");
             return (Criteria) this;
@@ -308,7 +304,6 @@ public class PmsBrandExample {
             return (Criteria) this;
         }
 
-
         public Criteria andSortIsNull() {
             addCriterion("sort is null");
             return (Criteria) this;
@@ -368,7 +363,6 @@ public class PmsBrandExample {
             addCriterion("sort not between", value1, value2, "sort");
             return (Criteria) this;
         }
-
 
         public Criteria andFactoryStatusIsNull() {
             addCriterion("factory_status is null");
@@ -430,7 +424,6 @@ public class PmsBrandExample {
             return (Criteria) this;
         }
 
-
         public Criteria andShowStatusIsNull() {
             addCriterion("show_status is null");
             return (Criteria) this;
@@ -490,7 +483,6 @@ public class PmsBrandExample {
             addCriterion("show_status not between", value1, value2, "showStatus");
             return (Criteria) this;
         }
-
 
         public Criteria andProductCountIsNull() {
             addCriterion("product_count is null");
@@ -552,7 +544,6 @@ public class PmsBrandExample {
             return (Criteria) this;
         }
 
-
         public Criteria andProductCommentCountIsNull() {
             addCriterion("product_comment_count is null");
             return (Criteria) this;
@@ -612,7 +603,6 @@ public class PmsBrandExample {
             addCriterion("product_comment_count not between", value1, value2, "productCommentCount");
             return (Criteria) this;
         }
-
 
         public Criteria andLogoIsNull() {
             addCriterion("logo is null");
@@ -683,7 +673,6 @@ public class PmsBrandExample {
             addCriterion("logo not between", value1, value2, "logo");
             return (Criteria) this;
         }
-
 
         public Criteria andBigPicIsNull() {
             addCriterion("big_pic is null");
@@ -756,22 +745,27 @@ public class PmsBrandExample {
         }
     }
 
-    /** GeneratedCriteria 的具体实现，空壳 */
     public static class Criteria extends GeneratedCriteria {
         protected Criteria() {
             super();
         }
     }
 
-    /** 最小条件颗粒，condition + value + type 标记，MyBatis XML 据此拼 SQL */
     public static class Criterion {
         private String condition;
+
         private Object value;
+
         private Object secondValue;
+
         private boolean noValue;
+
         private boolean singleValue;
+
         private boolean betweenValue;
+
         private boolean listValue;
+
         private String typeHandler;
 
         public String getCondition() {
