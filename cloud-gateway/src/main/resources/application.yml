@@ -14,4 +14,12 @@ spring:
             - id: auth-route
               uri: http://localhost:8081
               predicates:
-                - Path=/**
+                - Path=/auth/**
+              filters:
+                - StripPrefix=1
+            - id: admin-route
+              uri: http://localhost:8082
+              predicates:
+                - Path=/admin/**
+              filters:
+                - StripPrefix=1
