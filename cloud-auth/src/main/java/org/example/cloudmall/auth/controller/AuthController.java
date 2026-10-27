@@ -2,13 +2,14 @@ package org.example.cloudmall.auth.controller;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 import org.example.cloudmall.auth.service.AuthService;
 import org.example.cloudmall.common.result.CommonResult;
 import org.example.cloudmall.model.UmsAdmin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import cn.dev33.satoken.stp.StpUtil;
 
 @RestController
 public class AuthController {
@@ -25,9 +26,9 @@ public class AuthController {
         if (admin == null) {
             return CommonResult.failed("账号或密码错误");
         }
+        StpUtil.login(admin.getId());
         Map<String, Object> data = new HashMap<>();
-        // TODO 占位令牌，后续接入 Sa-Token 并由网关统一登录校验
-        data.put("token", UUID.randomUUID().toString().replace("-", ""));
+        data.put("token", StpUtil.getTokenValue());
         data.put("username", admin.getUsername());
         data.put("nickName", admin.getNickName());
         return CommonResult.success(data);

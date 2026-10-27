@@ -14,3 +14,22 @@ spring:
       min-idle: 5
       max-active: 10
       filters: stat
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: 123456
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+
+# Sa-Token 配置（与网关保持一致）
+sa-token:
+  token-name: Authorization
+  timeout: 7200
+  is-log: false
+  is-read-cookie: false
+  is-read-header: true
+  token-style: uuid

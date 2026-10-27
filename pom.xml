@@ -26,6 +26,7 @@
         <mybatis.version>3.5.19</mybatis.version>
         <mybatis-spring.version>3.0.5</mybatis-spring.version>
         <druid.version>1.2.25</druid.version>
+        <sa-token.version>1.46.0</sa-token.version>
     </properties>
 
     <modules>
@@ -51,6 +52,21 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-reactor-spring-boot4-starter</artifactId>
+                <version>${sa-token.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-spring-boot4-starter</artifactId>
+                <version>${sa-token.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-redis-jackson</artifactId>
+                <version>${sa-token.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
