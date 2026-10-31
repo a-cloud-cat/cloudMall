@@ -14,3 +14,6 @@ spring:
       min-idle: 5
       max-active: 10
       filters: stat
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
